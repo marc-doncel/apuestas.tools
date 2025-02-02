@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./final/script.js" defer></script>
+  <title>Reglas tenis</title>
+</head>
+<body class="max-w-1/2 mx-auto h-dvh p-2">
+
+  <header class="container flex justify-between py-2">
+    <a href="/index.html">Logo</a>
+    <nav>
+      <ul class="flex gap-5">
+        <li><a href="#">Calculadoras</a></li>
+        <li><a href="#">Herramientas</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Libro MB</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="pt-8">
+      <h1 class="text-center text-3xl mb-8">Reglas tenis</h1>
+      <p>Con esta herramienta, puedes ver rápidamente si dos casas de apuestas tienen las mismas reglas de tenis.</p>
+      <form class="flex justify-around items-center bg-gray-200 rounded-lg p-4 mt-6">
+
+        <div>
+          <label for="bookie1" class="block mb-2">Casa 1</label>
+          <select id="bookie1" class="bg-gray-50 border border-gray-300 rounded-lg p-2 text-sm w-50">
+            <option selected>Elige una casa</option>
+            <option value="betfair">Betfair</option>
+            <option value="bet365">bet365</option>
+            <option value="winamax">Winamax</option>
+          </select>
+        </div>
+
+        <div class="w-6">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M32 96l320 0 0-64c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l96 96c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-96 96c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6l0-64L32 160c-17.7 0-32-14.3-32-32s14.3-32 32-32zM480 352c17.7 0 32 14.3 32 32s-14.3 32-32 32l-320 0 0 64c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-96-96c-6-6-9.4-14.1-9.4-22.6s3.4-16.6 9.4-22.6l96-96c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 64 320 0z"/></svg>
+        </div>
+
+        <div>
+          <label for="bookie2" class="block mb-2">Casa 2</label>
+          <select id="bookie2" class="bg-gray-50 border border-gray-300 rounded-lg p-2 text-sm w-50">
+            <option selected>Elige una casa</option>
+            <option value="betfair">Betfair</option>
+            <option value="bet365">bet365</option>
+            <option value="winamax">Winamax</option>
+          </select>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+  
+  <footer>
+
+  </footer>
+
+</body>
+</html>
