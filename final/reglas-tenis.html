@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
-  <script src="./final/script.js" defer></script>
-  <title>Reglas tenis</title>
+  <script src="./script.js" defer></script>
+  <title>Comparador de reglas de tenis | Apuestas.Tools</title>
 </head>
-<body class="max-w-1/2 mx-auto h-dvh p-2">
+<body class="h-dvh bg-gray-50 text-gray-950 font-body">
 
-  <header class="container flex justify-between py-2">
-    <a href="/index.html">Logo</a>
-    <nav>
+  <header class="max-w-screen mb-25">
+    <nav class="max-w-1/2 mx-auto flex justify-between py-2">
+      <a href="./index.html">Apuestas.Tools</a>
       <ul class="flex gap-5">
         <li><a href="#">Calculadoras</a></li>
         <li><a href="#">Herramientas</a></li>
@@ -21,43 +21,62 @@
     </nav>
   </header>
   
-  <main>
-    <section class="pt-8">
-      <h1 class="text-center text-3xl mb-8">Reglas tenis</h1>
-      <p>Con esta herramienta, puedes ver rápidamente si dos casas de apuestas tienen las mismas reglas de tenis.</p>
-      <form class="flex justify-around items-center bg-gray-200 rounded-lg p-4 mt-6">
-
+  <main class="max-w-1/2 mx-auto mb-25">
+    <section class="mb-15">
+      <h1 class="text-center text-5xl font-bold mb-15 font-heading">Comparador de reglas de tenis</h1>
+      <p class="mb-6">Compara las reglas sobre retiros de jugadores en tenis entre distintas casas de apuestas y encuentra las combinaciones ideales para cubrir sin riesgos.</p>
+      <form class="flex justify-around items-center bg-gray-200 rounded-lg py-8 px-4 mb-6">
         <div>
-          <label for="bookie1" class="block mb-2">Casa 1</label>
-          <select id="bookie1" class="bg-gray-50 border border-gray-300 rounded-lg p-2 text-sm w-50">
+          <label for="bookie1" class="block mb-2">Selecciona una casa para comparar reglas</label>
+          <select id="tennisRule" class="bg-gray-50 border border-gray-300 rounded-lg p-2 text-sm w-75">
             <option selected>Elige una casa</option>
-            <option value="betfair">Betfair</option>
-            <option value="bet365">bet365</option>
-            <option value="winamax">Winamax</option>
           </select>
         </div>
-
-        <div class="w-6">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M32 96l320 0 0-64c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l96 96c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-96 96c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6l0-64L32 160c-17.7 0-32-14.3-32-32s14.3-32 32-32zM480 352c17.7 0 32 14.3 32 32s-14.3 32-32 32l-320 0 0 64c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-96-96c-6-6-9.4-14.1-9.4-22.6s3.4-16.6 9.4-22.6l96-96c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 64 320 0z"/></svg>
-        </div>
-
-        <div>
-          <label for="bookie2" class="block mb-2">Casa 2</label>
-          <select id="bookie2" class="bg-gray-50 border border-gray-300 rounded-lg p-2 text-sm w-50">
-            <option selected>Elige una casa</option>
-            <option value="betfair">Betfair</option>
-            <option value="bet365">bet365</option>
-            <option value="winamax">Winamax</option>
-          </select>
-        </div>
-
       </form>
+      <div id="tennisRuleResult" class="hidden bg-gray-200 rounded-lg py-8 px-4 mb-6">
+        <p id="tennisRuleResult-p" class="mb-4"></p>
+        <div class="bg-gray-100 rounded-lg p-4 mb-4">
+          <p id="tennisRuleResult-cite" class="italic"></p>
+        </div>
+      </div>
+      <div id="tennisRuleResult-2" class="hidden bg-gray-200 rounded-lg py-8 px-4 mb-6">
+        <p id="tennisRuleResult-p2" class="mb-4"></p>
+        <div id="tennisRuleResult-2-logos">
+        </div>
+      </div>
     </section>
+    <section class="text">
+      <h2 class="text-3xl mb-4 font-heading font-semibold">¿Qué tipos de casas existen según sus reglas de tenis?</h2>
+      <p class="mb-4">En las apuestas deportivas de tenis, las casas suelen clasificar sus reglas según el momento en que consideran válidos los resultados en caso de que un jugador se retire. A continuación, se describen los tres tipos más comunes:</p>
+      <ul>
+        <li>
+          <strong>Casas de partido completo:</strong>
+          <p class="mb-4">Estas casas consideran válidas las apuestas únicamente si el partido se completa en su totalidad. Si el partido no llega a finalizar, todas las apuestas son anuladas y se reembolsa el importe apostado.</p>
+        </li>
+        <li>
+          <strong>Casas de set:</strong>
+          <p class="mb-4">En este caso, las apuestas son consideradas válidas si al menos un set completo se ha jugado antes de la retirada de un jugador. Si el retiro ocurre antes de finalizar el primer set, las apuestas se anulan.</p>
+        </li>
+        <li>
+          <strong>Casas de punto:</strong>
+          <p class="mb-4">Estas casas validan las apuestas desde el momento en que se juega el primer punto del partido. Incluso si el partido no se completa, las apuestas se mantienen válidas siempre que haya comenzado.</p>
+        </li>
+      </ul>
+      <p class="mb-10">Este desglose te ayudará a entender las diferencias y a tomar decisiones más informadas al seleccionar casas de apuestas para cubrir sin riesgo.</p>
 
+      <h2 class="text-3xl font-semibold mb-4 font-heading">¿Por qué son importantes las reglas de tenis al cubrir?</h2>
+      <p class="mb-4">Las reglas de tenis que aplican las casas de apuestas son fundamentales al realizar coberturas, ya que determinan en qué situaciones las apuestas se mantienen válidas o se anulan. Comprender estas normas permite evitar pérdidas inesperadas y maximizar las oportunidades de apostar sin riesgo.</p>
+      <p class="mb-4">Algunas casas anulan apuestas en situaciones específicas, como la retirada de un jugador, mientras que otras las validan dependiendo del progreso del partido. Este conocimiento es crucial para planificar coberturas efectivas.</p>
+      <strong>Ejemplo 1:</strong>
+      <p class="mb-4">Imagina que haces una apuesta inicial en una casa que requiere que el partido se complete para que las apuestas sean válidas (casa de partido completo). Luego decides cubrir en una casa que valida las apuestas desde que se juega el primer punto (casa de punto). Si un jugador se retira tras el primer set, tu apuesta inicial sería anulada, pero la cobertura se mantendría válida, generando un posible desequilibrio y pérdida.</p>
+      <strong>Ejemplo 2:</strong>
+      <p class="mb-4">Haces una apuesta en una casa que valida las apuestas después de que se complete un set (casa de set) y cubres en otra con las mismas reglas. Si el retiro ocurre después del primer set, ambas apuestas serán válidas, lo que asegura que la cobertura funcione correctamente y no haya riesgo de pérdidas.</p>
+      <p class="mb-4">Estos ejemplos ilustran cómo las diferencias en las reglas afectan la viabilidad de una cobertura sin riesgo, resaltando la importancia de conocer a fondo las políticas de las casas de apuestas.</p>
+    </section>
   </main>
   
-  <footer>
-
+  <footer class="max-w-screen py-2 text-center">
+    <p>© Apuestas.Tools 2025</p>
   </footer>
 
 </body>
