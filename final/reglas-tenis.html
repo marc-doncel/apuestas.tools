@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
   <title>Comparador de reglas de tenis | Apuestas.Tools</title>
 </head>
-<body class="h-dvh bg-gray-50 text-gray-950 font-body">
+<body class="h-dvh bg-gray-50 text-gray-950 dark:bg-gray-800 dark:text-gray-200 font-body">
 
-  <header class="container mb-32 bg-gray-700 text-gray-200 text-sm font-bold">
-    <nav class="container px-4 lg:max-w-1/2 lg:px-0 mx-auto flex justify-between py-4">
-      <a href="./index.html">Apuestas.Tools</a>
-      <ul class="flex gap-5">
-        <li><a class="hover:text-orange-400" href="#">Calculadoras</a></li>
-        <li><a class="hover:text-orange-400" href="#">Herramientas</a></li>
+  <header class="w-full mb-32 bg-gray-900 text-gray-200 text-sm font-bold border-b-2 border-b-orange-400">
+    <nav class="max-w-3xl px-4 mx-auto flex justify-between py-4">
+      <a href="index.html">Apuestas.Tools</a>
+      <ul class="flex items-center gap-5">
+        <li><a class="hover:text-orange-400" href="calculadora-value.html">Calculadoras</a></li>
+        <li><a class="hover:text-orange-400" href="reglas-tenis.html">Herramientas</a></li>
         <li><a class="hover:text-orange-400" href="#">Blog</a></li>
         <li><a class="hover:text-orange-400" href="#">Libro MB</a></li>
+        <li id="darkMode" class="cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </li>
       </ul>
     </nav>
   </header>
   
-  <main class="container px-4 lg:max-w-1/2 lg:px-0 mx-auto mb-30">
+  <main class="px-4 max-w-3xl mx-auto mb-30">
     <section class="mb-30">
       <h1 class="text-center text-5xl font-bold mb-15 font-heading">Comparador de reglas de tenis</h1>
       <p class="mb-6">Compara las reglas sobre retiros de jugadores en tenis entre distintas casas de apuestas y encuentra las combinaciones ideales para cubrir sin riesgos.</p>
       <form class="flex justify-around items-center bg-gray-200 rounded-lg py-8 px-4 mb-6">
         <div>
           <label for="bookie1" class="block mb-2">Selecciona una casa para comparar reglas</label>
-          <select id="tennisRule" class="bg-gray-50 border border-gray-300 rounded-lg p-2 text-sm w-75">
+          <select id="tennisRule" class="bg-gray-50 border border-gray-300 rounded-lg p-2 text-sm w-75 focus:border-orange-500 focus:ring focus:ring-orange-500 focus:outline-none">
             <option selected>Elige una casa</option>
           </select>
         </div>
@@ -75,7 +78,7 @@
     </section>
   </main>
   
-  <footer class="container py-4 text-center bg-gray-700 text-gray-200 text-sm">
+  <footer class="w-full py-4 text-center bg-gray-800 text-gray-200 text-sm">
     <p>© Apuestas.Tools 2025</p>
   </footer>
 
